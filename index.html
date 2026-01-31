@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="container">
+            <h1>Date today <span id="date"></span></h1>
+            <form action="">
+                <div class="dateSalary">
+                <span>$</span>
+                <input type="text" placeholder="what is the salary?" class="salary">
+                <h3>Simple system: 60% 10% 10% 10% 10%</h3>
+                <div class="dateContainer">
+                    <div>
+                        <p>Household expenses %. Select or enter</p>
+                        <input type="text" placeholder="......." class="home">
+                        <select class="homeSelect tip">
+                            <option disabled>Select option</option>
+                            <option  selected value="0.60">60% 💗</option>
+                            <option  value="0.50">50%💙</option>
+                            <option  value="0.40">40%😊</option>
+                            <option  value="0.30">So bad 30%</option>
+                        </select>
+                    </div>
+                    <div><p>Investments %. Select or enter</p>
+                    <input type="text" placeholder="......." class="investments">
+                    <select class="investmentsSelect tip">
+                        <option disabled>Select option</option>
+                        <option selected value="0.10">10% 💗</option>
+                        <option value="0.20">20%💙</option>
+                        <option value="0.30">30%😊</option>
+                        <option value="0.40">Ohhh 40%</option>
+                        <option value="0.50">Sure? 50%</option>
+                        <option value="0.00">Sure?Really? 0%</option>
+                    </select></div>
+                    <div><p>Security %. Select or enter</p>
+                    <input type="text" placeholder="......." class="security">
+                    <select class="securitySelect tip">
+                        <option disabled>Select option</option>
+                    <option selected value="0.10">10% 💗</option>
+                    <option value="0.20">20%💙</option>
+                    <option value="0.30">30%😊</option>
+                    <option value="0.40">Ohhh 40%</option>
+                    <option value="0.50">Sure? 50%</option>
+                    <option value="0.00">Sure?Really? 0%</option>
+                    </select>
+                </div>
+                    <div><p>Entertainment %. Select or enter</p>
+                    <input type="text" placeholder="......." class="entertainment">
+                    <select class="entertainmentSelect tip">
+                        <option disabled>Select option</option>
+                        <option selected value="0.10">10% 💗</option>
+                        <option value="0.20">20%💙</option>
+                        <option value="0.30">30%😊</option>
+                        <option value="0.40">Ohhh 40%</option>
+                        <option value="0.50">Sure? 50%</option>
+                        <option value="0.00">Sure?Really?0%</option>
+                    </select></div>
+                    <div><p>Saving %. Select or enter</p>
+                    <input type="text" placeholder="......." class="saving">
+                    <select class="savingSelect tip">
+                        <option disabled>Select option</option>
+                        <option selected value="0.10">10% 💗</option>
+                        <option value="0.20">20%💙</option>
+                        <option value="0.30">30%😊</option>
+                        <option value="0.40">Ohhh 40%</option>
+                        <option value="0.50">Sure? 50%</option>
+                        <option value="0.00">Sure?Really? 0%</option>
+                    </select></div>
+                    <button class="addProcent">Choise</button>
+                </div>
+                </div>
+            </form>
+
+                <div id="totalCategory">
+                    <div id="householdExpenses">
+                        <p>Household expenses</p>
+                        <span>$</span>
+                        <span id="sumHouseExp"></span>
+                    </div>
+                    <div id="investments">
+                        <p>Investments</p>
+                        <span>$</span>
+                        <span id="sumInv"></span>
+                    </div>
+                    <div id="security">
+                        <p>Security</p>
+                        <span>$</span>
+                        <span id="sumSec"></span>
+                    </div>
+                        <div id="entertainment">
+                            <p>Entertainment</p>
+                            <span>$</span>
+                            <span id="sumEntertainment"></span>
+                        </div>
+                            <div id="saving">
+                                <p>Saving</p>
+                                <span>$</span>
+                                <span id="sumSav"></span>
+                            </div>
+                </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

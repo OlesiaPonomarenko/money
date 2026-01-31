@@ -1,0 +1,84 @@
+body {
+    background-image: url(./img/adib-sulthon-firdaous-PUj12qXt6fw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(94, 97, 93, 0.9);
+    font-family: "Montserrat", sans-serif;
+}
+
+input {
+    font-family: "Montserrat", sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.tip {
+    font-family: "Montserrat", sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.dateContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.addProcent {
+    background-color: #78DEC7;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    flex: 1;
+    margin-top: 10px;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    background-color: #A04747;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 55%;
+    height: 90vh;
+    opacity: 0.7;
+    border-radius: 15px;
+}
+
+h1 {
+    color: #EEDF7A;
+    font-size: 45px;
+    align-self: center;
+}
+
+h3 {
+    color: #EEDF7A;
+}
+
+.dateSalary {
+    display: flex;
+    flex-direction: column;
+}
+
+#totalCategory {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#householdExpenses, #investments, #security, #entertainment, #saving {
+    margin: 20px;
+    background-color: rgba(148, 198, 142, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    justify-content: space-around;
+    width: 40%;
+    height: 60%;
+}
