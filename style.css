@@ -11,13 +11,26 @@ input {
     font-family: "Montserrat", sans-serif;
     padding: 5px;
     border-radius: 10px;
+    transition: 2s;
+}
+
+input:hover {
+    background-color: #78DEC7;
+    cursor: pointer;
 }
 
 .tip {
     font-family: "Montserrat", sans-serif;
     padding: 5px;
     border-radius: 10px;
+    transition: 2s;
 }
+
+.tip:hover {
+    background-color: #78DEC7;
+    cursor: pointer;
+}
+
 
 .dateContainer {
     display: flex;
@@ -32,6 +45,10 @@ input {
     font-family: 'Montserrat', sans-serif;
     flex: 1;
     margin-top: 10px;
+}
+
+.addProcent:hover {
+    cursor: pointer;
 }
 
 .mainContainer {
@@ -71,7 +88,7 @@ h3 {
 
 #householdExpenses, #investments, #security, #entertainment, #saving {
     margin: 20px;
-    background-color: rgba(148, 198, 142, 0.9);
+    background-color: #78DEC7;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid black;
