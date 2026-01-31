@@ -36,15 +36,15 @@ input {
 
 .mainContainer {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .container {
     display: flex;
     background-color: #A04747;
-    flex-direction: column;
     flex-wrap: wrap;
-    width: 55%;
-    height: 90vh;
+    width: 70%;
     opacity: 0.7;
     border-radius: 15px;
 }
