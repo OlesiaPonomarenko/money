@@ -48,13 +48,15 @@ function getValue(input, select) {
     return Number(select.value);
 }
 
+let homeValue, entertainmentValue, investmentsValue, securityValue, savingValue;
+
 
 function calculateTotal() {
-    const homeValue = getValue(home, homeSelect);
-    const entertainmentValue = getValue(entertainment, entertainmentSelect);
-    const investmentsValue = getValue(investments, investmentsSelect);
-    const securityValue = getValue(security, securitySelect);
-    const savingValue = getValue(saving, savingSelect);
+    homeValue = getValue(home, homeSelect);
+    entertainmentValue = getValue(entertainment, entertainmentSelect);
+    investmentsValue = getValue(investments, investmentsSelect);
+    securityValue = getValue(security, securitySelect);
+    savingValue = getValue(saving, savingSelect);
 
     return homeValue + entertainmentValue + investmentsValue + securityValue + savingValue;
 }
@@ -138,11 +140,7 @@ btn.addEventListener('click', (e) => {
             return;
     }
     const salary =  Number(document.querySelector('.salary').value);
-    const homeValue = getValue(home, homeSelect);
-    const entertainmentValue = getValue(entertainment, entertainmentSelect);
-    const investmentsValue = getValue(investments, investmentsSelect);
-    const securityValue = getValue(security, securitySelect);
-    const savingValue = getValue(saving, savingSelect);
+
 
     const sumHome = salary * homeValue;
     const sumEntertainment = salary * entertainmentValue;
