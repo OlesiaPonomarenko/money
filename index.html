@@ -20,7 +20,7 @@
                 <h3>Simple system: 60% 10% 10% 10% 10%</h3>
                 <div class="dateContainer">
                     <div>
-                        <p>Household expenses %. Select or enter</p>
+                        <p class="nameExpenses">Household expenses %. Select or enter</p>
                         <input type="text" placeholder="......." class="home">
                         <select class="homeSelect tip">
                             <option disabled>Select option</option>
@@ -30,7 +30,7 @@
                             <option  value="0.30">So bad 30%</option>
                         </select>
                     </div>
-                    <div><p>Investments %. Select or enter</p>
+                    <div><p class="nameExpenses">Investments %. Select or enter</p>
                     <input type="text" placeholder="......." class="investments">
                     <select class="investmentsSelect tip">
                         <option disabled>Select option</option>
@@ -41,7 +41,7 @@
                         <option value="0.50">Sure? 50%</option>
                         <option value="0.00">Sure?Really? 0%</option>
                     </select></div>
-                    <div><p>Security %. Select or enter</p>
+                    <div><p class="nameExpenses">Security %. Select or enter</p>
                     <input type="text" placeholder="......." class="security">
                     <select class="securitySelect tip">
                         <option disabled>Select option</option>
@@ -53,7 +53,7 @@
                     <option value="0.00">Sure?Really? 0%</option>
                     </select>
                 </div>
-                    <div><p>Entertainment %. Select or enter</p>
+                    <div><p class="nameExpenses">Entertainment %. Select or enter</p>
                     <input type="text" placeholder="......." class="entertainment">
                     <select class="entertainmentSelect tip">
                         <option disabled>Select option</option>
@@ -64,7 +64,7 @@
                         <option value="0.50">Sure? 50%</option>
                         <option value="0.00">Sure?Really?0%</option>
                     </select></div>
-                    <div><p>Saving %. Select or enter</p>
+                    <div><p class="nameExpenses">Saving %. Select or enter</p>
                     <input type="text" placeholder="......." class="saving">
                     <select class="savingSelect tip">
                         <option disabled>Select option</option>
@@ -75,14 +75,15 @@
                         <option value="0.50">Sure? 50%</option>
                         <option value="0.00">Sure?Really? 0%</option>
                     </select></div>
-                    <button class="addProcent">Choise</button>
+                    <button id="resetBtn" class="btn">Resert Value</button>
+                    <button class="addProcent btn">Choise</button>
                 </div>
                 </div>
             </form>
 
                 <div id="totalCategory">
                     <div id="householdExpenses">
-                        <p>Household expenses</p>
+                        <p>Household </p>
                         <span>$</span>
                         <span id="sumHouseExp"></span>
                     </div>

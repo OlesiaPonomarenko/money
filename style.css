@@ -37,7 +37,7 @@ input:hover {
     flex-direction: column;
 }
 
-.addProcent {
+.btn {
     background-color: #78DEC7;
     border: none;
     border-radius: 10px;
@@ -47,7 +47,7 @@ input:hover {
     margin-top: 10px;
 }
 
-.addProcent:hover {
+.btn:hover {
     cursor: pointer;
 }
 
@@ -95,4 +95,39 @@ h3 {
     justify-content: space-around;
     width: 40%;
     height: 60%;
+}
+
+@media all and (max-width: 500px) {
+    .mainContainer {
+        width: 90%;
+    }
+    .container{
+        width: 100%;
+    }
+    #totalCategory {
+        flex-wrap: wrap;
+    }
+        #householdExpenses,
+        #investments,
+        #security,
+        #entertainment,
+        #saving {
+        flex: 1 1 calc(50% - 20px);
+        max-width: 82px;
+        max-height: 80px;
+        margin: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        }
+    h1 {
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    h3, .nameExpenses, span {
+        padding-left: 10px;
+    }
+    input, select {
+        margin-left: 10px;
+    }
+    
 }

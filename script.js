@@ -11,11 +11,37 @@ const investmentsSelect = document.querySelector('.investmentsSelect');
 const entertainmentSelect = document.querySelector('.entertainmentSelect');
 const securitySelect = document.querySelector('.securitySelect');
 const homeSelect = document.querySelector('.homeSelect');
+const resetBtn = document.querySelector('#resetBtn');
+
+resetBtn.addEventListener('click', (e) => {
+    
+    e.preventDefault();
+
+    home.value = '';
+    investments.value = '';
+    security.value = '';
+    entertainment.value = '';
+    saving.value = '';
+
+    homeSelect.selectedIndex = 1;
+    investmentsSelect.selectedIndex = 1;
+    securitySelect.selectedIndex = 1;
+    entertainmentSelect.selectedIndex = 1;
+    savingSelect.selectedIndex = 1;
+
+    
+    document.querySelector('#sumHouseExp').textContent = '';
+    document.querySelector('#sumInv').textContent = '';
+    document.querySelector('#sumSec').textContent = '';
+    document.querySelector('#sumEntertainment').textContent = '';
+    document.querySelector('#sumSav').textContent = '';
+});
+
 
 
 
 function getValue(input, select) {
-    input
+
     if (input.value.trim() !== '' && !isNaN(input.value)) {
         return Number((input.value) / 100);
     }
@@ -30,7 +56,7 @@ function calculateTotal() {
     const securityValue = getValue(security, securitySelect);
     const savingValue = getValue(saving, savingSelect);
 
-    const total = homeValue + entertainmentValue + investmentsValue + securityValue + savingValue;
+    return homeValue + entertainmentValue + investmentsValue + securityValue + savingValue;
 }
 
 
@@ -40,10 +66,10 @@ home.addEventListener('input', () => {
     const newSum = 100 - value;
     const part = newSum / 4;
 
-    investments.value = part;
-    security.value = part;
-    entertainment.value = part;
-    saving.value = part;
+    investments.value = part.toFixed(2);
+    security.value = part.toFixed(2);
+    entertainment.value = part.toFixed(2);
+    saving.value = part.toFixed(2);
 });
 
 investments.addEventListener('input', () => {
@@ -51,10 +77,10 @@ investments.addEventListener('input', () => {
     const inv = Number(investments.value);
 
     if (inv > newSum / 4 || inv < newSum / 4) {
-        const other = ((newSum - inv) / 3).toFixed(1);
-        security.value = other;
-        entertainment.value = other;
-        saving.value = other;
+        const other = ((newSum - inv) / 3);
+        security.value = other.toFixed(2);
+        entertainment.value = other.toFixed(2);
+        saving.value = other.toFixed(2);
     }
 });
 
@@ -63,17 +89,17 @@ security.addEventListener('input', () => {
     const sec = Number(security.value);
 
     if (sec > newSum / 3 || sec < newSum / 3) {
-        const otherSum = ((newSum - sec) / 2).toFixed(1);
-        entertainment.value = otherSum;
-        saving.value = otherSum;
+        const otherSum = ((newSum - sec) / 2);
+        entertainment.value = otherSum.toFixed(2);
+        saving.value = otherSum.toFixed(2);
     }
 });
 
 entertainment.addEventListener('input', () => {
     const newSum = 100 - Number(home.value) - Number(investments.value) - Number(security.value);
     const ent = Number(entertainment.value);
-    const savSum = (newSum - ent).toFixed(1);
-    saving.value = savSum;
+    const savSum = (newSum - ent);
+    saving.value = savSum.toFixed(2);
 });
 
 
@@ -98,10 +124,11 @@ function calculateSelectSum() {
 btn.addEventListener('click', (e) => {
     e.preventDefault();
 
-     const total = calculateSelectSum();
+    const total = calculateSelectSum();
+    const totalInput = calculateTotal();
 
 
-    if (total > 1) {
+    if (total > 1 || totalInput > 1) {
            Swal.fire({
            icon: "error",
            title: "Error",
@@ -128,8 +155,9 @@ btn.addEventListener('click', (e) => {
     document.querySelector('#sumEntertainment').textContent = sumEntertainment.toFixed(2);
     document.querySelector('#sumSav').textContent = sumSaving.toFixed(2);
 
-    calculateTotal();
-    console.log(salary);
+
 })
+
+
 
 
