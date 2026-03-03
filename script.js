@@ -62,6 +62,11 @@ function calculateTotal() {
 }
 
 
+function tryFirst () {
+    const totalSum = 100 - ((homeValue + investmentsValue + entertainmentValue + savingValue + securityValue) * 100);
+    const diffSum = diffSum(totalSum) / 4;
+}
+
 
 home.addEventListener('input', () => {
     const value = Number(home.value);
