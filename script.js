@@ -162,17 +162,5 @@ btn.addEventListener('click', (e) => {
 })
 
 
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    console.log(data.title);
-
-      document.body.innerHTML += `<h2>${data.title}</h2>`;
-      document.body.innerHTML += `<p>${data.body}</p>`;
-  })
-  .catch(error => {
-    console.log('Error:', error);
-  });
 
 
